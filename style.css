@@ -17,43 +17,79 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
     transition: grid-template-columns 3s ease;
+    overflow: hidden;
 }
 
 .container div{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
 }
 
-.div1Baslik, .div2Baslik{
-    color: #F04A00;
-    margin-top: 10%;    
-    text-shadow: 5px 5px 15px #F04A00;
-    font-size: 40px;
-    transition: font-size 2s ease;
-}
-
 .div1{
-    background-image: url('frontend.jpg');
+    background-image: url('koy.jpg');
 }
 
 .div2{
-    background-image: url('backend.jpg');
+    background-image: url('sehir.jpg');
 }
+
+.div1Baslik, .div2Baslik{
+    color: #FFF8E7;
+    margin-top: 10%;    
+    text-shadow: 5px 5px 15px #F04A00;
+    font-size: 30px;
+    transition: font-size 2s ease;
+}
+
+
+.btn1, .btn2{
+    text-decoration: none;
+    color: #F04A00;
+    background-color: #FFF8E7;
+    padding: 5px 20px;
+    border-radius: 10px;
+    opacity: 0.7;
+}
+
+.btn1{
+    transform: translateX(-6000px);
+    transition: transform 5s ease;
+}
+
+.btn2{
+    transform: translateX(6000px);
+    transition: transform 2s ease;
+}
+
 
 .showFront{
     grid-template-columns: 3fr 1fr;
 }
 
+
 .showBack{
     grid-template-columns: 1fr 3fr;
 }
 
-.buyuk{
-    font-size: 100px;
+.showFront .btn1, .showBack .btn2{
+    transform: translateX(0px);
 }
+
+
+.buyuk{
+    font-size: 80px;
+}
+
+
+
+
 
 
 
